@@ -1,0 +1,40 @@
+#page {
+
+  & > h2 {
+    text-transform: uppercase;
+    margin: 1.5em 0 1.0em 0;
+  }
+}
+
+.post {
+  position: relative;
+
+  & > h2:first-child {
+    text-transform: uppercase;
+    margin: 0 0 1.0em 0;
+    display: block;
+    background-color: $background-color;
+    padding-right: 5px;
+    z-index: 1;
+
+    & + .date {
+      position: absolute;
+      top: 0;
+      right: 0;
+      float: none;
+      z-index: 1;
+      margin-top: 2.25em;
+    }
+  }
+
+  & + #disqus_thread_wrapper {
+    border: 3px solid $lightpink-color;
+    transform: rotate(-1deg);
+    padding: 2em;
+    margin-top: 6em;
+
+    #disqus_thread {
+      transform: rotate(1deg);
+    }
+  }
+}
