@@ -1,0 +1,82 @@
+#photolog {
+
+  ul#posts {
+    list-style-type: none;
+    list-style-type: none;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-left: 0;
+    clear: both;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      background-color: white;
+      padding: 1em;
+      margin-bottom: 2em;
+      line-height: 2em;
+      box-shadow: 6px 6px 2px 0px $gray-color;
+      border: 1px solid $gray4-color;
+
+      > p:first-child:last-child {
+        margin-bottom: 4em;
+
+        & > a {
+          margin-bottom: 0;
+        }
+      }
+
+      > a {
+        display: block;
+        line-height: 1em;
+
+        &:last-child {
+          margin-bottom: 4em;
+
+          & > img {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      img {
+        border: 1px solid $gray-color;
+        display: inline-block;
+        line-height: 1em;
+      }
+
+      > img {
+        &:last-child {
+          margin-bottom: 4em;
+        }
+      }
+
+      p {
+        display: block;
+        margin: 0;
+      }
+
+      * + p:last-child {
+        font-family: 'Permanent Marker', cursive;
+        font-size: 150%;
+        line-height: 1.4em;
+        padding: 0 0.5em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+
+        a {
+          display: inline;
+          line-height: 1em;
+          margin: 0;
+        }
+      }
+
+      &:nth-child(odd) {
+        transform: rotate(0.75deg);
+      }
+      &:nth-child(even) {
+        transform: rotate(-0.75deg);
+      }
+    }
+  }
+}
