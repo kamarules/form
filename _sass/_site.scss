@@ -1,0 +1,17 @@
+#site {
+  font-size: 115%;
+  text-align: justify;
+  width: 42em;
+  margin: 0em auto;
+  line-height: 1.5em;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+#submenu + .content {
+  margin-top: 67px + 51.15px;
+  padding-top: 2em;
+  text-align: left;
+}
