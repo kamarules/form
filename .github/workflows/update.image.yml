@@ -30,15 +30,15 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v3
         with:
-          push: true
-          tags: |
-            ghcr.io/${{ github.repository_owner }}/*teddit:latest
-            ${{ secrets.DOCKER_USERNAME }}/*teddit:latest           
+          push: false
+          uses: |
+            ghcr.io/${{ github.repository_owner }}/teddit:latest
+            ${{ secrets.DOCKER_USERNAME }}/teddit:latest           
           labels: |
             org.opencontainers.image.source=${{ github.event.repository.html_url }}
             org.opencontainers.image.created=${{ steps.prep.outputs.created }}
             org.opencontainers.image.revision=${{ github.sha }}            
-          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/*teddit:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/teddit:latest
           cache-to: type=inline
       -
         name: Image digest
